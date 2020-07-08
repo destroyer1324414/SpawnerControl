@@ -50,7 +50,7 @@ public class CapabilityControllableSpawner {
             if(++this.spawnedMobsCount >= cfg.mobThreshold) {
                 if (cfg.breakSpawner)
                     spawner.getWorld().setBlockToAir(spawner.getPos());
-                return true;
+                return false;
             }
             this.adjustDelayAfterSpawn(spawner.getSpawnerBaseLogic(), cfg.spawnRateModifier);
             return false;
